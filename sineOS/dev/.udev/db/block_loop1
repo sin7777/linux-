@@ -1,0 +1,6 @@
+N:loop1
+S:block/7:1
+W:16
+E:MPATH_SBIN_PATH=/sbin
+E:LVM_SBIN_PATH=/sbin
+E:ID_FS_TYPE=

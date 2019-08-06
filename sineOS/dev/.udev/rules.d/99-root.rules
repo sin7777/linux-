@@ -1,0 +1,2 @@
+KERNEL=="disk/by-uuid/a98b8604-a200-40fc-9393-a2cedbd1f913", SYMLINK+="root"
+SYMLINK=="disk/by-uuid/a98b8604-a200-40fc-9393-a2cedbd1f913", SYMLINK+="root"

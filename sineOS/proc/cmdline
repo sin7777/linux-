@@ -1,0 +1,1 @@
+ro root=UUID=a98b8604-a200-40fc-9393-a2cedbd1f913 rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16   KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM rhgb quiet

@@ -1,0 +1,48 @@
+.
+├── bin
+│   ├── bash
+│   ├── echo
+│   ├── insmod
+│   ├── ls
+│   └── mount
+├── etc
+│   ├── fstab
+│   └── mtab
+├── gen-img
+├── init
+├── lib
+│   └── modules
+│       ├── cdrom.ko
+│       ├── crc-t10dif.ko
+│       ├── ext4.ko
+│       ├── jbd2.ko
+│       ├── mbcache.ko
+│       ├── mptbase.ko
+│       ├── mptscsih.ko
+│       ├── mptspi.ko
+│       ├── scsi_transport_spi.ko
+│       └── sd_mod.ko
+├── lib64
+│   ├── ld-linux-x86-64.so.2
+│   ├── libacl.so.1
+│   ├── libattr.so.1
+│   ├── libblkid.so.1
+│   ├── libcap.so.2
+│   ├── libc.so.6
+│   ├── libdl.so.2
+│   ├── libpthread.so.0
+│   ├── librt.so.1
+│   ├── libselinux.so.1
+│   ├── libsepol.so.1
+│   ├── libtinfo.so.5
+│   └── libuuid.so.1
+├── mnt
+│   └── root
+├── mount
+├── proc
+├── sbin
+│   └── insmod
+├── sys
+└── tree0.55.txt
+
+12 directories, 33 files

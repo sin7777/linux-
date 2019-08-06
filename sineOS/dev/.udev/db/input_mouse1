@@ -1,0 +1,6 @@
+N:input/mouse1
+S:char/13:33
+S:input/by-path/platform-i8042-serio-1-mouse
+E:ID_CLASS=mouse
+E:ID_SERIAL=noserial
+E:ID_PATH=platform-i8042-serio-1

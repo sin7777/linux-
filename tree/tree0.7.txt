@@ -1,0 +1,645 @@
+.
+├── bin
+│   ├── awk
+│   ├── bash
+│   ├── cat
+│   ├── chgrp
+│   ├── chmod
+│   ├── chown
+│   ├── echo
+│   ├── fgrep
+│   ├── insmod
+│   ├── ln
+│   ├── login
+│   ├── ls
+│   ├── mkdir
+│   ├── mknod
+│   ├── mount
+│   └── strace
+├── etc
+│   ├── fstab
+│   ├── group
+│   ├── init.d
+│   │   └── functions
+│   ├── mtab
+│   ├── nsswitch.conf
+│   ├── pam.d
+│   │   ├── abrt-cli-root
+│   │   ├── atd
+│   │   ├── authconfig
+│   │   ├── authconfig-gtk
+│   │   ├── authconfig-tui
+│   │   ├── chfn
+│   │   ├── chsh
+│   │   ├── config-util
+│   │   ├── crond
+│   │   ├── cups
+│   │   ├── cvs
+│   │   ├── eject
+│   │   ├── fingerprint-auth -> fingerprint-auth-ac
+│   │   ├── fingerprint-auth-ac
+│   │   ├── gdm
+│   │   ├── gdm-autologin
+│   │   ├── gdm-fingerprint
+│   │   ├── gdm-password
+│   │   ├── gnome-screensaver
+│   │   ├── halt
+│   │   ├── kcheckpass
+│   │   ├── kdm
+│   │   ├── kdm-np
+│   │   ├── kppp
+│   │   ├── kscreensaver
+│   │   ├── ksu
+│   │   ├── liveinst
+│   │   ├── login
+│   │   ├── newrole
+│   │   ├── other
+│   │   ├── passwd
+│   │   ├── password-auth -> password-auth-ac
+│   │   ├── password-auth-ac
+│   │   ├── pluto
+│   │   ├── polkit-1
+│   │   ├── poweroff
+│   │   ├── ppp
+│   │   ├── reboot
+│   │   ├── remote
+│   │   ├── run_init
+│   │   ├── runuser
+│   │   ├── runuser-l
+│   │   ├── setup
+│   │   ├── smartcard-auth -> smartcard-auth-ac
+│   │   ├── smartcard-auth-ac
+│   │   ├── smtp -> /etc/alternatives/mta-pam
+│   │   ├── smtp.postfix
+│   │   ├── sshd
+│   │   ├── ssh-keycat
+│   │   ├── su
+│   │   ├── sudo
+│   │   ├── sudo-i
+│   │   ├── su-l
+│   │   ├── system-auth -> system-auth-ac
+│   │   ├── system-auth-ac
+│   │   ├── system-config-authentication
+│   │   ├── system-config-date
+│   │   ├── system-config-kdump
+│   │   ├── system-config-keyboard
+│   │   ├── system-config-network
+│   │   ├── system-config-network-cmd
+│   │   ├── system-config-users
+│   │   ├── wireshark
+│   │   ├── xdm
+│   │   └── xserver
+│   ├── passwd
+│   ├── security
+│   │   ├── access.conf
+│   │   ├── chroot.conf
+│   │   ├── console.apps
+│   │   │   ├── abrt-cli-root
+│   │   │   ├── authconfig
+│   │   │   ├── authconfig-gtk
+│   │   │   ├── authconfig-tui
+│   │   │   ├── config-util
+│   │   │   ├── eject
+│   │   │   ├── halt
+│   │   │   ├── kppp
+│   │   │   ├── liveinst
+│   │   │   ├── poweroff
+│   │   │   ├── reboot
+│   │   │   ├── setup
+│   │   │   ├── system-config-authentication
+│   │   │   ├── system-config-date
+│   │   │   ├── system-config-kdump
+│   │   │   ├── system-config-keyboard
+│   │   │   ├── system-config-network
+│   │   │   ├── system-config-network-cmd
+│   │   │   ├── system-config-users
+│   │   │   ├── wireshark
+│   │   │   └── xserver
+│   │   ├── console.handlers
+│   │   ├── console.perms
+│   │   ├── console.perms.d
+│   │   ├── group.conf
+│   │   ├── limits.conf
+│   │   ├── limits.d
+│   │   │   └── 90-nproc.conf
+│   │   ├── namespace.conf
+│   │   ├── namespace.d
+│   │   ├── namespace.init
+│   │   ├── opasswd
+│   │   ├── pam_env.conf
+│   │   ├── pam_winbind.conf
+│   │   ├── sepermit.conf
+│   │   └── time.conf
+│   ├── shadow
+│   ├── sysconfig
+│   │   ├── network
+│   │   ├── sysconfig
+│   │   │   ├── acpid
+│   │   │   ├── atd
+│   │   │   ├── auditd
+│   │   │   ├── authconfig
+│   │   │   ├── autofs
+│   │   │   ├── cbq
+│   │   │   │   ├── avpkt
+│   │   │   │   └── cbq-0000.example
+│   │   │   ├── clock
+│   │   │   ├── console
+│   │   │   ├── cpuspeed
+│   │   │   ├── crond
+│   │   │   ├── firstboot
+│   │   │   ├── grub
+│   │   │   ├── hsqldb
+│   │   │   ├── htcacheclean
+│   │   │   ├── httpd
+│   │   │   ├── i18n
+│   │   │   ├── init
+│   │   │   ├── ip6tables
+│   │   │   ├── ip6tables-config
+│   │   │   ├── ip6tables.old
+│   │   │   ├── iptables
+│   │   │   ├── iptables-config
+│   │   │   ├── iptables.old
+│   │   │   ├── irqbalance
+│   │   │   ├── kdump
+│   │   │   ├── kernel
+│   │   │   ├── keyboard
+│   │   │   ├── modules
+│   │   │   │   └── bluez-uinput.modules
+│   │   │   ├── netconsole
+│   │   │   ├── network
+│   │   │   ├── networking
+│   │   │   │   ├── devices
+│   │   │   │   └── profiles
+│   │   │   │       └── default
+│   │   │   ├── network-scripts
+│   │   │   │   ├── ifcfg-lo
+│   │   │   │   ├── ifdown -> ../../../sbin/ifdown
+│   │   │   │   ├── ifdown-bnep
+│   │   │   │   ├── ifdown-eth
+│   │   │   │   ├── ifdown-ib
+│   │   │   │   ├── ifdown-ippp
+│   │   │   │   ├── ifdown-ipv6
+│   │   │   │   ├── ifdown-isdn -> ifdown-ippp
+│   │   │   │   ├── ifdown-post
+│   │   │   │   ├── ifdown-ppp
+│   │   │   │   ├── ifdown-routes
+│   │   │   │   ├── ifdown-sit
+│   │   │   │   ├── ifdown-tunnel
+│   │   │   │   ├── ifup -> ../../../sbin/ifup
+│   │   │   │   ├── ifup-aliases
+│   │   │   │   ├── ifup-bnep
+│   │   │   │   ├── ifup-eth
+│   │   │   │   ├── ifup-ib
+│   │   │   │   ├── ifup-ippp
+│   │   │   │   ├── ifup-ipv6
+│   │   │   │   ├── ifup-isdn -> ifup-ippp
+│   │   │   │   ├── ifup-plip
+│   │   │   │   ├── ifup-plusb
+│   │   │   │   ├── ifup-post
+│   │   │   │   ├── ifup-ppp
+│   │   │   │   ├── ifup-routes
+│   │   │   │   ├── ifup-sit
+│   │   │   │   ├── ifup-tunnel
+│   │   │   │   ├── ifup-wireless
+│   │   │   │   ├── init.ipv6-global
+│   │   │   │   ├── net.hotplug
+│   │   │   │   ├── network-functions
+│   │   │   │   └── network-functions-ipv6
+│   │   │   ├── nfs
+│   │   │   ├── nspluginwrapper
+│   │   │   ├── ntpd
+│   │   │   ├── ntpdate
+│   │   │   ├── openct
+│   │   │   ├── pluto
+│   │   │   ├── prelink
+│   │   │   ├── quota_nld
+│   │   │   ├── raid-check
+│   │   │   ├── readahead
+│   │   │   ├── readonly-root
+│   │   │   ├── rngd
+│   │   │   ├── rsyslog
+│   │   │   ├── samba
+│   │   │   ├── sandbox
+│   │   │   ├── saslauthd
+│   │   │   ├── selinux -> ../selinux/config
+│   │   │   ├── smartmontools
+│   │   │   ├── sshd
+│   │   │   ├── sysstat
+│   │   │   ├── sysstat.ioconf
+│   │   │   ├── system-config-firewall
+│   │   │   ├── system-config-firewall.old
+│   │   │   ├── system-config-users
+│   │   │   ├── udev
+│   │   │   ├── vncservers
+│   │   │   └── wpa_supplicant
+│   │   └── udev
+│   └── udev
+│       ├── rules.d
+│       │   ├── 01-ignore.rules
+│       │   ├── 10-console.rules
+│       │   ├── 10-dm.rules
+│       │   ├── 11-dm-lvm.rules
+│       │   ├── 13-dm-disk.rules
+│       │   ├── 50-firmware.rules
+│       │   ├── 50-udev-default.rules
+│       │   ├── 59-persistent-storage.rules
+│       │   ├── 60-cdrom_id.rules
+│       │   ├── 60-pcmcia.rules
+│       │   ├── 60-persistent-storage.rules
+│       │   ├── 61-dmraid-imsm.rules
+│       │   ├── 61-persistent-storage-edd.rules
+│       │   ├── 61-persistent-storage.rules
+│       │   ├── 64-lvm.rules
+│       │   ├── 64-md-raid.rules
+│       │   ├── 65-md-incremental-imsm.rules
+│       │   ├── 71-biosdevname.rules
+│       │   ├── 80-drivers.rules
+│       │   ├── 90-infiniband.rules
+│       │   ├── 95-dm-notify.rules
+│       │   └── 95-udev-late.rules
+│       ├── udev
+│       │   ├── makedev.d
+│       │   ├── rules.d
+│       │   │   ├── 60-fprint-autosuspend.rules
+│       │   │   ├── 60-openct.rules
+│       │   │   ├── 60-pcmcia.rules
+│       │   │   ├── 60-raw.rules
+│       │   │   ├── 70-persistent-cd.rules
+│       │   │   ├── 70-persistent-net.rules
+│       │   │   ├── 90-alsa.rules
+│       │   │   ├── 90-hal.rules
+│       │   │   ├── 97-bluetooth-serial.rules
+│       │   │   ├── 98-kexec.rules
+│       │   │   └── 99-fuse.rules
+│       │   └── udev.conf
+│       └── udev.conf
+├── gen-img
+├── init
+├── lib
+│   ├── modules
+│   │   └── 2.6.32-754.el6.x86_64
+│   │       └── kernel
+│   │           ├── drivers
+│   │           │   ├── cdrom
+│   │           │   │   └── cdrom.ko
+│   │           │   ├── message
+│   │           │   │   └── fusion
+│   │           │   │       ├── mptbase.ko
+│   │           │   │       ├── mptscsih.ko
+│   │           │   │       └── mptspi.ko
+│   │           │   └── scsi
+│   │           │       ├── scsi_transport_spi.ko
+│   │           │       └── sd_mod.ko
+│   │           ├── fs
+│   │           │   ├── ext4
+│   │           │   │   └── ext4.ko
+│   │           │   ├── jbd2
+│   │           │   │   └── jbd2.ko
+│   │           │   └── mbcache.ko
+│   │           └── lib
+│   │               └── crc-t10dif.ko
+│   └── udev
+│       ├── ata_id
+│       ├── cdrom_id
+│       ├── console_init
+│       ├── create_floppy_devices
+│       ├── edd_id
+│       ├── firmware.sh
+│       ├── fw_unit_symlinks.sh
+│       ├── hid2hci
+│       ├── path_id
+│       ├── pcmcia-check-broken-cis
+│       ├── pcmcia-socket-startup
+│       ├── rules.d
+│       ├── scsi_id
+│       ├── udev
+│       │   ├── ata_id
+│       │   ├── bluetooth_serial
+│       │   ├── cdrom_id
+│       │   ├── collect
+│       │   ├── console_check
+│       │   ├── console_init
+│       │   ├── create_floppy_devices
+│       │   ├── devices
+│       │   ├── edd_id
+│       │   ├── findkeyboards
+│       │   ├── firmware.sh
+│       │   ├── fstab_import
+│       │   ├── fw_unit_symlinks.sh
+│       │   ├── hid2hci
+│       │   ├── keyboard-force-release.sh
+│       │   ├── keymap
+│       │   ├── keymaps
+│       │   │   ├── acer
+│       │   │   ├── acer-aspire_5720
+│       │   │   ├── acer-aspire_5920g
+│       │   │   ├── acer-aspire_6920
+│       │   │   ├── acer-travelmate_c300
+│       │   │   ├── asus
+│       │   │   ├── compaq-e_evo
+│       │   │   ├── dell
+│       │   │   ├── everex-xt5000
+│       │   │   ├── force-release
+│       │   │   │   ├── common-volume-keys
+│       │   │   │   ├── dell-touchpad
+│       │   │   │   ├── hp-other
+│       │   │   │   └── samsung-other
+│       │   │   ├── fujitsu-amilo_pa_2548
+│       │   │   ├── fujitsu-amilo_pro_edition_v3505
+│       │   │   ├── fujitsu-amilo_pro_v3205
+│       │   │   ├── fujitsu-amilo_si_1520
+│       │   │   ├── fujitsu-esprimo_mobile_v5
+│       │   │   ├── fujitsu-esprimo_mobile_v6
+│       │   │   ├── hewlett-packard
+│       │   │   ├── hewlett-packard-2510p_2530p
+│       │   │   ├── hewlett-packard-compaq_elitebook
+│       │   │   ├── hewlett-packard-pavilion
+│       │   │   ├── hewlett-packard-presario-2100
+│       │   │   ├── hewlett-packard-tablet
+│       │   │   ├── hewlett-packard-tx2
+│       │   │   ├── ibm-thinkpad-usb-keyboard-trackpoint
+│       │   │   ├── inventec-symphony_6.0_7.0
+│       │   │   ├── lenovo-3000
+│       │   │   ├── lenovo-ideapad
+│       │   │   ├── lenovo-thinkpad-usb-keyboard-trackpoint
+│       │   │   ├── lenovo-thinkpad_x200_tablet
+│       │   │   ├── lenovo-thinkpad_x6_tablet
+│       │   │   ├── lg-x110
+│       │   │   ├── logitech-wave
+│       │   │   ├── logitech-wave-cordless
+│       │   │   ├── logitech-wave-pro-cordless
+│       │   │   ├── maxdata-pro_7000
+│       │   │   ├── medion-fid2060
+│       │   │   ├── medionnb-a555
+│       │   │   ├── micro-star
+│       │   │   ├── module-asus-w3j
+│       │   │   ├── module-ibm
+│       │   │   ├── module-lenovo
+│       │   │   ├── module-sony
+│       │   │   ├── module-sony-old
+│       │   │   ├── module-sony-vgn
+│       │   │   ├── olpc-xo
+│       │   │   ├── onkyo
+│       │   │   ├── oqo-model2
+│       │   │   ├── samsung-other
+│       │   │   ├── samsung-sq1us
+│       │   │   ├── samsung-sx20s
+│       │   │   ├── toshiba-satellite_a100
+│       │   │   ├── toshiba-satellite_a110
+│       │   │   ├── toshiba-satellite_m30x
+│       │   │   └── zepto-znote
+│       │   ├── modem-modeswitch
+│       │   ├── mpath-iosched.sh
+│       │   ├── openct_pcmcia
+│       │   ├── openct_serial
+│       │   ├── openct_usb
+│       │   ├── path_id
+│       │   ├── pci-db
+│       │   ├── pcmcia-check-broken-cis
+│       │   ├── pcmcia-socket-startup
+│       │   ├── rename_device
+│       │   ├── rule_generator.functions
+│       │   ├── rules.d
+│       │   │   ├── 01-log-block.rules
+│       │   │   ├── 10-console.rules
+│       │   │   ├── 10-dm.rules
+│       │   │   ├── 11-dm-lvm.rules
+│       │   │   ├── 13-dm-disk.rules
+│       │   │   ├── 40-isdn.rules
+│       │   │   ├── 40-libgphoto2.rules
+│       │   │   ├── 40-multipath.rules
+│       │   │   ├── 40-redhat.rules
+│       │   │   ├── 40-usb-media-players.rules
+│       │   │   ├── 42-qemu-usb.rules
+│       │   │   ├── 50-firmware.rules
+│       │   │   ├── 50-udev-default.rules
+│       │   │   ├── 56-hpmud.rules
+│       │   │   ├── 60-alias-kmsg.rules
+│       │   │   ├── 60-cdrom_id.rules
+│       │   │   ├── 60-libmtp.rules
+│       │   │   ├── 60-net.rules
+│       │   │   ├── 60-persistent-alsa.rules
+│       │   │   ├── 60-persistent-input.rules
+│       │   │   ├── 60-persistent-serial.rules
+│       │   │   ├── 60-persistent-storage.rules
+│       │   │   ├── 60-persistent-storage-tape.rules
+│       │   │   ├── 60-persistent-v4l.rules
+│       │   │   ├── 60-wacom.rules
+│       │   │   ├── 61-gnome-bluetooth-rfkill.rules
+│       │   │   ├── 61-mobile-action.rules
+│       │   │   ├── 61-option-modem-modeswitch.rules
+│       │   │   ├── 61-persistent-storage-edd.rules
+│       │   │   ├── 61-sas-storage.rules
+│       │   │   ├── 61-uinput-stddev.rules
+│       │   │   ├── 61-uinput-wacom.rules
+│       │   │   ├── 64-device-mapper.rules
+│       │   │   ├── 64-md-raid.rules
+│       │   │   ├── 65-libsane.rules
+│       │   │   ├── 65-libwacom.rules
+│       │   │   ├── 65-md-incremental.rules
+│       │   │   ├── 69-dm-lvm-metad.rules
+│       │   │   ├── 69-pilot-link.rules
+│       │   │   ├── 70-acl.rules
+│       │   │   ├── 70-anaconda.rules
+│       │   │   ├── 70-cups-libusb.rules
+│       │   │   ├── 70-hid2hci.rules
+│       │   │   ├── 70-printers.rules
+│       │   │   ├── 71-biosdevname.rules
+│       │   │   ├── 73-idrac.rules
+│       │   │   ├── 75-cd-aliases-generator.rules
+│       │   │   ├── 75-net-description.rules
+│       │   │   ├── 75-persistent-net-generator.rules
+│       │   │   ├── 75-tty-description.rules
+│       │   │   ├── 77-mm-ericsson-mbm.rules
+│       │   │   ├── 77-mm-longcheer-port-types.rules
+│       │   │   ├── 77-mm-pcmcia-device-blacklist.rules
+│       │   │   ├── 77-mm-platform-serial-whitelist.rules
+│       │   │   ├── 77-mm-simtech-port-types.rules
+│       │   │   ├── 77-mm-usb-device-blacklist.rules
+│       │   │   ├── 77-mm-zte-port-types.rules
+│       │   │   ├── 77-nm-olpc-mesh.rules
+│       │   │   ├── 78-sound-card.rules
+│       │   │   ├── 79-fstab_import.rules
+│       │   │   ├── 80-drivers.rules
+│       │   │   ├── 80-iosched.rules
+│       │   │   ├── 80-mpath-iosched.rules
+│       │   │   ├── 80-udisks.rules
+│       │   │   ├── 81-kvm-rhel.rules
+│       │   │   ├── 85-regulatory.rules
+│       │   │   ├── 85-usbmuxd.rules
+│       │   │   ├── 88-clock.rules
+│       │   │   ├── 89-microcode.rules
+│       │   │   ├── 90-infiniband.rules
+│       │   │   ├── 90-pulseaudio.rules
+│       │   │   ├── 91-drm-modeset.rules
+│       │   │   ├── 95-devkit-power-battery-recall-dell.rules
+│       │   │   ├── 95-devkit-power-battery-recall-fujitsu.rules
+│       │   │   ├── 95-devkit-power-battery-recall-gateway.rules
+│       │   │   ├── 95-devkit-power-battery-recall-ibm.rules
+│       │   │   ├── 95-devkit-power-battery-recall-lenovo.rules
+│       │   │   ├── 95-devkit-power-battery-recall-toshiba.rules
+│       │   │   ├── 95-devkit-power-csr.rules
+│       │   │   ├── 95-devkit-power-hid.rules
+│       │   │   ├── 95-devkit-power-wup.rules
+│       │   │   ├── 95-dm-notify.rules
+│       │   │   ├── 95-keyboard-force-release.rules
+│       │   │   ├── 95-keymap.rules
+│       │   │   ├── 95-udev-late.rules
+│       │   │   └── 97-bluetooth.rules
+│       │   ├── sas_path_id
+│       │   ├── scsi_id
+│       │   ├── udev-acl
+│       │   ├── udev-add-printer
+│       │   ├── udev-configure-printer
+│       │   ├── udev-kvm-check
+│       │   ├── udisks-dm-export
+│       │   ├── udisks-part-id
+│       │   ├── udisks-probe-ata-smart
+│       │   ├── udisks-probe-sas-expander
+│       │   ├── usb-db
+│       │   ├── usb_id
+│       │   ├── v4l_id
+│       │   ├── wdaemon_is_uinput.sh
+│       │   ├── write_cd_rules
+│       │   └── write_net_rules
+│       └── usb_id
+├── lib64
+│   ├── ld-linux-x86-64.so.2
+│   ├── libacl.so.1
+│   ├── libattr.so.1
+│   ├── libaudit.so.1
+│   ├── libblkid.so.1
+│   ├── libcap.so.2
+│   ├── libcom_err.so.2
+│   ├── libcrack.so.2
+│   ├── libcrypt.so.1
+│   ├── libc.so.6
+│   ├── libdb-4.7.so
+│   ├── libdbus-1.so.3
+│   ├── libdl.so.2
+│   ├── libe2p.so.2
+│   ├── libext2fs.so.2
+│   ├── libfreebl3.so
+│   ├── libfreeblpriv3.so
+│   ├── libgcc_s.so.1
+│   ├── libglib-2.0.so.0
+│   ├── libgmodule-2.0.so.0
+│   ├── libgobject-2.0.so.0
+│   ├── libgthread-2.0.so.0
+│   ├── libm.so.6
+│   ├── libnih-dbus.so.1
+│   ├── libnih.so.1
+│   ├── libnsl.so.1
+│   ├── libnss_compat-2.12.so
+│   ├── libnss_compat.so.2
+│   ├── libnss_dns-2.12.so
+│   ├── libnss_dns.so.2
+│   ├── libnss_files-2.12.so
+│   ├── libnss_files.so.2
+│   ├── libnss_hesiod-2.12.so
+│   ├── libnss_hesiod.so.2
+│   ├── libnss_ldap.so.2
+│   ├── libnss_nis-2.12.so
+│   ├── libnss_nisplus-2.12.so
+│   ├── libnss_nisplus.so.2
+│   ├── libnss_nis.so.2
+│   ├── libnss_sss.so.2
+│   ├── libnss_winbind.so.2
+│   ├── libnss_wins.so.2
+│   ├── libpam_misc.so.0
+│   ├── libpam.so.0
+│   ├── libpcre.so.0
+│   ├── libpopt.so.0
+│   ├── libpthread.so.0
+│   ├── librt.so.1
+│   ├── libselinux.so.1
+│   ├── libsepol.so.1
+│   ├── libtinfo.so.5
+│   ├── libuser.so.1
+│   ├── libutil.so.1
+│   ├── libuuid.so.1
+│   ├── libz.so.1
+│   └── security
+│       ├── pam_access.so
+│       ├── pam_cap.so
+│       ├── pam_chroot.so
+│       ├── pam_ck_connector.so
+│       ├── pam_console.so
+│       ├── pam_cracklib.so
+│       ├── pam_debug.so
+│       ├── pam_deny.so
+│       ├── pam_echo.so
+│       ├── pam_env.so
+│       ├── pam_exec.so
+│       ├── pam_faildelay.so
+│       ├── pam_faillock.so
+│       ├── pam_filter
+│       │   └── upperLOWER
+│       ├── pam_filter.so
+│       ├── pam_fprintd.so
+│       ├── pam_ftp.so
+│       ├── pam_gnome_keyring.so
+│       ├── pam_group.so
+│       ├── pam_issue.so
+│       ├── pam_keyinit.so
+│       ├── pam_krb5
+│       │   └── pam_krb5_storetmp
+│       ├── pam_krb5afs.so -> pam_krb5.so
+│       ├── pam_krb5.so
+│       ├── pam_lastlog.so
+│       ├── pam_ldap.so
+│       ├── pam_limits.so
+│       ├── pam_listfile.so
+│       ├── pam_localuser.so
+│       ├── pam_loginuid.so
+│       ├── pam_mail.so
+│       ├── pam_mkhomedir.so
+│       ├── pam_motd.so
+│       ├── pam_namespace.so
+│       ├── pam_nologin.so
+│       ├── pam_oddjob_mkhomedir.so
+│       ├── pam_passwdqc.so
+│       ├── pam_permit.so
+│       ├── pam_postgresok.so
+│       ├── pam_pwhistory.so
+│       ├── pam_rhosts.so
+│       ├── pam_rootok.so
+│       ├── pam_securetty.so
+│       ├── pam_selinux_permit.so -> pam_sepermit.so
+│       ├── pam_selinux.so
+│       ├── pam_sepermit.so
+│       ├── pam_shells.so
+│       ├── pam_smbpass.so
+│       ├── pam_sss.so
+│       ├── pam_stress.so
+│       ├── pam_succeed_if.so
+│       ├── pam_tally2.so
+│       ├── pam_time.so
+│       ├── pam_timestamp.so
+│       ├── pam_tty_audit.so
+│       ├── pam_umask.so
+│       ├── pam_unix_acct.so -> pam_unix.so
+│       ├── pam_unix_auth.so -> pam_unix.so
+│       ├── pam_unix_passwd.so -> pam_unix.so
+│       ├── pam_unix_session.so -> pam_unix.so
+│       ├── pam_unix.so
+│       ├── pam_userdb.so
+│       ├── pam_warn.so
+│       ├── pam_wheel.so
+│       ├── pam_winbind.so
+│       └── pam_xauth.so
+├── mnt
+│   └── root
+├── proc
+├── sbin
+│   ├── consoletype
+│   ├── fstab-decode
+│   ├── insmod
+│   ├── lsmod
+│   ├── start_udev
+│   ├── udevadm
+│   └── udevd
+├── sys
+└── tree0.7.txt
+
+55 directories, 587 files

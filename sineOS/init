@@ -1,0 +1,34 @@
+#!/bin/bash
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+mount -t proc proc /proc > /dev/null 2>&1
+mount -t sysfs sysfs /sys > /dev/null 2>&1
+
+#SPI
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_transport_spi.ko
+
+#sda
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptbase.ko
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptscsih.ko
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptspi.ko
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/lib/crc-t10dif.ko
+
+#scsi
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/cdrom/cdrom.ko
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/sd_mod.ko
+
+#ext4
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/jbd2/jbd2.ko
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/mbcache.ko
+#/sbin/insmod /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/ext4/ext4.ko
+
+#/sbin/start_udev
+
+#/sbin/udevd --daemon --resolve-names=never
+#/sbin/udevadm trigger --type=subsystems
+#/sbin/udevadm trigger --type=devices
+#/sbin/udevd settle
+
+#/bin/bash
+
+exec /sbin/init
